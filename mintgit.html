@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<title>5735512068</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://pbs.twimg.com/media/C9VOanHXkAA_eLp.jpg");
+    min-height: 75%;
+}
+.menu {
+    display: none;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ARTICLE</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">ABOUT ME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">CONTACT</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">By Arpawadee Sae-Ueng</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:70px">มาเริ่มต้นใช้ Git กันเถอะ</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">January 18, 2018</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:800px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Part 1 : เริ่มต้นใช้ Git</span></h5>
+    <h3>คำสั่งพื้นฐาน</h3>
+    
+    <p><UL Type="Circle"> <Li><strong> pwd (print working directory (dir))</strong> เป็นคำสั่งที่ใช้สำหรับแสดง Directory ปัจจุบัน<br><br>
+       <Li><strong> cd (change dir)</strong> เพื่อเปลี่ยนไปยัง dir อื่น cd ..[Enter] ย้ายไป Directory อีก 1 ชั้น<br><br>
+       <Li><strong> ls (list)</strong> ดูว่าใน dir ที่เราอยู่มีไฟล์หรือโฟลเดอร์อะไรบ้าง<br><br>
+       <Li><strong> mkdir (make dir)</strong> สร้างโฟลเดอร์ใหม่ขึ้นมา<br><br>
+       
+       <Li><strong> touch</strong> สร้างไฟล์ใหม่<br><br>
+       </UL> 
+       ตัวอย่างการใช้คำสั่ง</p>
+             
+ 
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>$ pwd<br>
+			/Users/username<br>
+			$ ls<br>
+			Desktop    Documents    Downloads<br>
+			$ cd Desktop<br>
+			$ pwd<br>
+			/Users/username/Desktop<br>
+			$ cd .. && pwd<br>
+			/Users/username<br>
+			$ mkdir gitrepo<br>
+			$ ls<br>
+			Desktop    Documents    Downloads    gitrepo<br>
+			$ cd gitrepo<br>
+			$ touch readme.md<br>
+			$ ls<br>
+			readme.md</i></p>
+    
+	</div>
+    
+    <br><br>
+    <h3>คำสั่ง Git</h3>
+    
+    <p>&nbsp; โดยพื้นฐานแล้ว git มีคำสั่งที่หลากหลายมากมาย แต่เราจะเริ่มกันด้วยคำสั่งเบื้องต้นที่ทำให้เราสามารถใช้งานได้ก่อนอันได้แก่</p>
+    <p><UL Type="Circle">
+    <Li><strong>git init</strong> ใช้สร้าง local repo ขึ้นมา<br><br>
+    <Li><strong>git add</strong> ใช้ stage เพื่อติดตามตามความเปลี่ยนแปลงของไฟล์<br><br>
+	<Li><strong>git commit</strong> ใช้เพื่อบันทึกความเปลี่ยนแปลงที่เกิดขึ้นสู่ local repo<br><br>
+	<Li><strong>git push</strong> ใช้เพื่อส่ง commit ไปยัง remote repo<br><br>
+	<Li><strong>git clone</strong> ใช้เพื่อคัดลอก repo จาก remote มายัง local<br><br>
+	<Li><strong>git fetch</strong> ใช้ดึงความเปลี่ยนแปลงจาก remote มายัง local แต่ยังไม่รวมเข้าด้วยกัน<br><br>
+	<Li><strong>git merge</strong> ใช้รวมความเปลี่ยนแปลงที่ได้มาจาก fetch เข้ากับ local<br><br>
+	<Li><strong>git pull</strong> ใช้ดึงความเปลี่ยนแปลงจาก remote มายัง local และรวมเข้าด้วยกัน (มีค่าเท่ากับ fetch+merge)<br><br>
+	<Li><strong>git log</strong> ใช้เพื่อดูว่า git repo มี commit อะไรแล้วบ้าง<br><br> 
+    </UL></p>
+    
+    <h3>ทดลองสร้างกันเลย</h3>
+   <p>&nbsp;ต่อไปเราจะสร้าง GitHub Repository กัน ไปที่เว็บ http://github.com เมื่อล็อกอินเสร็จเรียบร้อยแล้ว เราจะอยู่ที่หน้าหลัก ดูข้างบนด้านขวากด + เลือก create new repository แล้วก็ตั้งชื่ออะไรก็ได้ ซึ่งในที่นี้ขอตั้งชื่อว่า Mygit </p> 
+    
+  
+    <img src="http://student.coe.phuket.psu.ac.th/~s5735512068/project1/Mygit.png" style="width:100%;max-width:1000px;margin-top:32px;">
+  
+ 
+ <br>
+ <p>&nbsp; จากนั้นเปิด Terminal ขึ้นมา แล้วก็เริ่มตามนี้</p>
+ 
+ <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>
+      # สร้างโฟลเดอร์ Mygit
+      $ mkdir Mygit <br><br>
+      
+      # เข้าไปในโฟลเดอร์ Mygit <br>
+	  $ cd Mygit <br><br>
+      
+      # แสดงข้อความ mint ในไฟล์ README.md<br>
+      $ echo "# mint" >> README.md<br><br>
+
+      # สร้าง local repo ในโฟลเดอร์ Mygit<br>
+	  $ git init<br>
+	  Initialized empty Git repository in /Users/username/Mygit/.git/<br><br>
+
+	  # ใช้ stage เพื่อติดตามตามความเปลี่ยนแปลงของไฟล์<br>
+      $ git add README.md<br><br>
+      
+      # คำสั่งตรวจสอบ status เราจะใช้เพื่อตรวจสอบว่ามีอะไรเปลี่ยนแปลง<br>
+      $ git status<br><br>
+      
+      Initial commit<br><br>
+
+	  # ตรงนี้บอกเราว่ามีไฟล์ที่เปลี่ยนแปลงและรอการ commit อยู่นะ<br>
+      Changes to be committed:<br>
+        &nbsp;(use "git rm --cached <file>..." to unstage)<br><br>
+
+      # โดยการเปลี่ยนแปลงนี้คือการสร้างไฟล์ใหม่ขึ้นมา ชื่อ readme.md<br>
+        &nbsp;&nbsp;new file:&nbsp;readme.md<br><br>
+      
+      # ระบุตัวตน <br><br>
+      $ git config --global user.email "5735512068@psu.ac.th"<br>
+      $ git config --global user.name "arpawadee"<br><br>
+      
+      # บันทึกความเปลี่ยนแปลงที่เกิดขึ้นสู่ local repo <br>
+      $ git commit -m "first commit" <br><br>
+      
+      # เช็คว่า local repo นี้มี remote repo รึยัง<br>
+      $ git remote -v<br><br>
+      
+      # เมื่อยังไม่มี remote repo เราก็จะเพิ่มมันเข้าไป โดยใช้ url ที่ก็อปปี้ไว้เมื่อกี้<br>
+      $ git remote add origin https://github.com/arpawadee/Mygit.git<br><br>
+      
+      # เช็คอีกครั้งว่า local repo นี้มี remote repo รึยัง<br>
+      $ git remote -v<br>
+      origin  https://github.com/arpawadee/Mygit.git (fetch)<br>
+      origin  https://github.com/arpawadee/Mygit.git (push)<br><br>
+      
+      # ต่อมา push to origin (remote repo) ให้ป้อนชื่อผู้ใช้และรหัสผ่าน<br>
+      $ git push -u origin master<br><br>
+          
+ </div>
+
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">My Profile</span></h5>
+    
+   </div>  
+    <img src="http://student.coe.phuket.psu.ac.th/~s5735512068/mmm.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+    <br>
+		<center><p><strong>Name:</strong> Arpawadee Sae-Ueng<br><br>
+
+		   <strong>Nickname:</strong> Mint<br><br>
+
+		   <strong>Birthday:</strong> 4th August, 1996.<br><br>
+
+           <strong>Hobbies:</strong> Take a photo , Travel , Cook .<br><br>
+
+           <strong>Student ID:</strong> 5735512068<br><br>
+
+           <strong>Department of Computer Engineering</strong><br><br>
+
+           <strong>Faculty of Engineering Prince of Songkla University Phuket Campus</strong><br></p></center>
+  
+
+
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CONTACT ME</span></h5>
+    
+   <center> 
+   <p>Email : 5735512068@psu.ac.th</p>
+   <p>Facebook : <a href="https://www.facebook.com/mintz.smile.5" title="W3.CSS" target="_blank" class="w3-hover-text-green">Mint Arpawadee</a></p>
+   <p>Instagram : <a href="https://www.instagram.com/mint_panorama/" title="W3.CSS" target="_blank" class="w3-hover-text-green">mint_panorama</a></p>
+   
+   <br><br><br><br>
+   
+   </center>
+    
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by Arpawadee Sae-Ueng</p>
+</footer>
+
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(41.878114, -87.629798);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>
